@@ -14,7 +14,7 @@ from pathlib import Path
 from validate_plugin import validate_repo
 
 PUBLIC_DIRECTORIES = (".agents", ".github", "docs", "plugins", "scripts", "tests")
-PUBLIC_FILES = ("README.md", "LICENSE", "CHANGELOG.md", "CONTRIBUTING.md", "requirements-dev.txt", ".gitignore")
+PUBLIC_FILES = ("README.md", "LICENSE", "CHANGELOG.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SECURITY.md", "ACCESSIBILITY.md", "requirements-dev.txt", ".gitignore")
 EXCLUDED_DIRECTORIES = {".git", ".venv", "__pycache__", "node_modules", "work"}
 PRIVATE_VALUES = {
     "local home or clipboard path": re.compile(r"/Users/|/home/|codex-clipboard-[a-f0-9]"),
@@ -24,7 +24,13 @@ PRIVATE_VALUES = {
 
 def release_files(root: Path) -> list[Path]:
     """Select the public repository, never an arbitrary sibling/work directory."""
-    candidates = [root / name for name in PUBLIC_FILES if (root / name).is_file()]
+    candidates = []
+    for name in PUBLIC_FILES:
+        path = root / name
+        if path.is_symlink():
+            raise ValueError(f"symlink cannot be published: {name}")
+        if path.is_file():
+            candidates.append(path)
     for directory in PUBLIC_DIRECTORIES:
         start = root / directory
         if not start.exists():

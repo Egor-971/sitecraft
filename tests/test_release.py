@@ -47,9 +47,20 @@ class ReleaseTest(unittest.TestCase):
     def test_public_symlink_is_rejected(self):
         target = Path(self.temporary.name) / "outside.txt"
         target.write_text("private fixture")
-        (self.root / "docs/outside.md").symlink_to(target)
-        with self.assertRaisesRegex(ValueError, "symlink"):
-            BUILDER.build_release(self.root, self.output)
+        for relative in ("docs/outside.md", "README.md", "SECURITY.md"):
+            with self.subTest(path=relative):
+                path = self.root / relative
+                original = path.read_bytes() if path.exists() else None
+                if path.exists():
+                    path.unlink()
+                path.symlink_to(target)
+                try:
+                    with self.assertRaisesRegex(ValueError, "symlink|escaping link"):
+                        BUILDER.build_release(self.root, self.output)
+                finally:
+                    path.unlink()
+                    if original is not None:
+                        path.write_bytes(original)
 
     def test_private_value_is_rejected_without_logging_it(self):
         secret = "ghp_" + "A" * 30

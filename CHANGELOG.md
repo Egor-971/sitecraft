@@ -12,6 +12,8 @@
 
 - English skill entrypoints, plugin UI and primary release documentation; locale follows the audience.
 - Targeted QA guidance for focus after rerender, draft restoration and timezone-consistent dates.
+- Community guidelines, private vulnerability reporting instructions, accessibility statement and issue/PR templates.
+- Release selection rejects symlinks in both root files and public directories.
 
 ## 1.2.0 — 2026-10-10
 

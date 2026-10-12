@@ -1,0 +1,26 @@
+name: Accessibility barrier
+description: Report a barrier to reading, operating or understanding the plugin or its guidance.
+title: "[Accessibility] "
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: Version and environment
+      description: Relevant client, browser, device or assistive technology. Share only what is necessary.
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Affected skill or interface
+      description: Explain where the barrier appears and how to reproduce it.
+    validations:
+      required: true
+  - type: textarea
+    id: barrier
+    attributes:
+      label: Expected behavior and actual barrier
+      description: Sanitized evidence is optional. Do not include private data.
+    validations:
+      required: true
+

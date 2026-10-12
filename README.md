@@ -4,6 +4,8 @@ Codex skills for distinctive websites and functional web products, built around 
 
 [Русский](docs/README.ru.md) · [Validation](docs/VALIDATION.md) · [Changelog](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
+[Code of Conduct](CODE_OF_CONDUCT.md) · [Security](SECURITY.md) · [Accessibility](ACCESSIBILITY.md)
+
 Sitecraft helps Codex choose an identity from the product, audience and content, then implement and inspect the actual user journey. It supports new sites, existing interfaces, visual audits and professional UI/UX upgrades. It preserves the user's stack and useful functionality.
 
 ## Five focused skills

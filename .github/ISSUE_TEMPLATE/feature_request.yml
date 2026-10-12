@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest an improvement tied to a real website or product goal.
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User goal and current problem
+      description: Who needs this, and which task is difficult today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the result, scope and why existing skills do not cover it.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: References and acceptance criteria
+      description: Optional current sources, examples and a way to verify the improvement.
+

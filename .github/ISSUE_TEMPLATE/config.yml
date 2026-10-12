@@ -1,0 +1,6 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security vulnerability privately
+    url: https://github.com/Egor-971/sitecraft/security/advisories/new
+    about: Do not disclose unresolved vulnerabilities or credentials in public issues.
+

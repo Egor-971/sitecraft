@@ -1,0 +1,35 @@
+name: Bug report
+description: Report a reproducible plugin, installation or generated-workflow problem.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Use synthetic or sanitized data. Report vulnerabilities privately through the Security tab."
+  - type: input
+    id: version
+    attributes:
+      label: Version and environment
+      description: Sitecraft version, Codex client, operating system and relevant project stack.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the skill invocation and a minimal sanitized request or example.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior and evidence
+      description: Relevant error, screenshot or result. State which checks were actually run.
+    validations:
+      required: true
+

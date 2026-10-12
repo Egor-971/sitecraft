@@ -2,6 +2,8 @@
 
 Use a concrete failure or use case to improve Sitecraft. A new rule should change a useful decision without imposing an unrelated style or workflow on every project. Keep skill descriptions focused, and place conditional detail in the relevant reference. Preserve implicit discovery and explicit user authorization.
 
+Follow the [Code of Conduct](CODE_OF_CONDUCT.md). Use the issue forms for bugs, feature requests and accessibility barriers. Report vulnerabilities through the private channel in [SECURITY.md](SECURITY.md), rather than public issues. See [ACCESSIBILITY.md](ACCESSIBILITY.md) for scope and current limits.
+
 ## A useful report
 
 Include the plugin version, skill invocation, goal, relevant stack, observed result and expected behavior. Distinguish the initial implementation from internal fixes and final delivery. For UI issues, include the affected state and viewport, accessible screenshots, input steps and any relevant runtime error. Redact credentials, private account data and client material. Do not upload a full private conversation.

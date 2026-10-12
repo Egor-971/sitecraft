@@ -41,4 +41,4 @@ python3 -m unittest discover -s tests -v
 python3 scripts/build_release.py --output-dir dist
 ```
 
-Strict mode additionally requires the dependencies in `requirements-dev.txt`. CI is configured for Python 3.12 and 3.14; GitHub execution must be checked independently from local success. Public repository: [Egor-971/sitecraft](https://github.com/Egor-971/sitecraft). Publication does not imply inclusion in a general plugin directory or endorsement by Anthropic, OpenAI or Google.
+Strict mode additionally requires the dependencies in `requirements-dev.txt`. The [initial public CI run](https://github.com/Egor-971/sitecraft/actions/runs/38303390463) for commit `2c78528` passed on Python 3.12 and 3.14, including strict validation, all 15 tests and archive creation. Later commits have their own run status. Public repository: [Egor-971/sitecraft](https://github.com/Egor-971/sitecraft). Publication does not imply inclusion in a general plugin directory or endorsement by Anthropic, OpenAI or Google.
