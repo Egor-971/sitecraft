@@ -1,0 +1,35 @@
+name: Validate Sitecraft
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.12', '3.14']
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install validation dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Validate manifests, paths, links and skills
+        run: python scripts/validate_plugin.py --strict
+      - name: Test packaging failure detection
+        run: python -m unittest discover -s tests -v
+      - name: Build and verify public archive
+        run: python scripts/build_release.py --output-dir dist
+      - uses: actions/upload-artifact@v7
+        with:
+          name: sitecraft-python-${{ matrix.python }}
+          path: |
+            dist/*.zip
+            dist/*.sha256
+          if-no-files-found: error

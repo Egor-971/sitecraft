@@ -1,0 +1,20 @@
+{
+  "name": "sitecraft-marketplace",
+  "interface": {
+    "displayName": "Sitecraft"
+  },
+  "plugins": [
+    {
+      "name": "sitecraft",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sitecraft"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

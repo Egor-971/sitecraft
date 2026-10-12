@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+work/
+.env
+.env.*
+!.env.example
+*.zip
+dist/

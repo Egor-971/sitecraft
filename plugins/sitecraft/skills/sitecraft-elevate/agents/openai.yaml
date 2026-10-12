@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sitecraft — Elevate"
+  short_description: "Implement an original professional website UI/UX system."
+  default_prompt: "Use $sitecraft-elevate to develop and implement a distinctive professional UI/UX system across this website, with purposeful motion and interactions."
+policy:
+  allow_implicit_invocation: true

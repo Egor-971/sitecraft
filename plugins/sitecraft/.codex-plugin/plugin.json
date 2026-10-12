@@ -1,0 +1,44 @@
+{
+  "name": "sitecraft",
+  "version": "1.3.0",
+  "description": "Create, redesign and review distinctive websites and functional web products around their business goals. Research relevant competitors, implement complete user journeys and verify UI, data and failure states. Offer optional professional design upgrades with user consent.",
+  "license": "MIT",
+  "keywords": [
+    "web-design",
+    "frontend",
+    "redesign",
+    "typography",
+    "ui-ux",
+    "motion-design",
+    "visual-review",
+    "web-products",
+    "e-commerce",
+    "competitor-research"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Sitecraft",
+    "shortDescription": "Distinctive websites and functional web products",
+    "longDescription": "Five Codex skills for creating, redesigning, reviewing and elevating websites and web products. Start from the business goal, research relevant competitors, develop an original design system and verify complete user journeys. Covers commerce, chats, learning, media, workspaces and new niches. Preserve functionality, data and integration boundaries. Optional additional design work requires consent.",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $sitecraft-create to build a distinctive website with clear content and browser verification.",
+      "Use $sitecraft-redesign to improve this website, replace generic styling and preserve its functionality.",
+      "Use $sitecraft-review to inspect this website and report concrete design and usability issues.",
+      "Use $sitecraft-elevate to develop and implement a distinctive professional UI/UX system across this website, with purposeful motion and interactions.",
+      "Use $sitecraft-product to build a functional web product around my business goal. Research competitors, develop original UI/UX, implement the core journeys and test them in the browser."
+    ],
+    "composerIcon": "./assets/sitecraft.svg",
+    "logo": "./assets/sitecraft.svg"
+  },
+  "author": {
+    "name": "Egor-971",
+    "url": "https://github.com/Egor-971"
+  },
+  "repository": "https://github.com/Egor-971/sitecraft",
+  "homepage": "https://github.com/Egor-971/sitecraft#readme"
+}

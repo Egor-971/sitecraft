@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sitecraft — Product"
+  short_description: "Build web products with complete, tested user journeys."
+  default_prompt: "Use $sitecraft-product to build a functional web product around my business goal. Research competitors, develop original UI/UX, implement the core journeys and test them in the browser."
+policy:
+  allow_implicit_invocation: true

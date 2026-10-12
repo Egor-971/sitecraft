@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sitecraft — Create"
+  short_description: "Build a distinctive website around its real purpose."
+  default_prompt: "Use $sitecraft-create to build a distinctive website with clear content and browser verification."
+policy:
+  allow_implicit_invocation: true
